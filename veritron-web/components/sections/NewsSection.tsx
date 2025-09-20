@@ -311,25 +311,23 @@ const NewsSection = ({ news }: NewsProps) => {
                   variants={fadeIn("up", "spring", index * 0.15, 0.65)}
                 >
                   <Card
-                    className={`group h-full flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-xl cursor-pointer overflow-hidden border-0 bg-white/80 backdrop-filter backdrop-blur-sm ${
-                      isFake
+                    className={`group h-full flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-xl cursor-pointer overflow-hidden border-0 bg-white/80 backdrop-filter backdrop-blur-sm ${isFake
                         ? "hover:shadow-red-100/50"
                         : isHighlyCredible
-                        ? "hover:shadow-green-100/50"
-                        : "hover:shadow-amber-100/50"
-                    }`}
+                          ? "hover:shadow-green-100/50"
+                          : "hover:shadow-amber-100/50"
+                      }`}
                     onClick={() => handleCardClick(newsItem.id)}
                   >
                     <div className="relative">
                       {/* Status Badge */}
                       <div
-                        className={`absolute top-3 left-3 z-10 rounded-full px-3 py-1.5 text-xs font-semibold text-white shadow-lg backdrop-blur-sm ${
-                          isFake
+                        className={`absolute top-3 left-3 z-10 rounded-full px-3 py-1.5 text-xs font-semibold text-white shadow-lg backdrop-blur-sm ${isFake
                             ? "bg-gradient-to-r from-red-500 to-red-600"
                             : isHighlyCredible
-                            ? "bg-gradient-to-r from-green-500 to-green-600"
-                            : "bg-gradient-to-r from-amber-500 to-amber-600"
-                        }`}
+                              ? "bg-gradient-to-r from-green-500 to-green-600"
+                              : "bg-gradient-to-r from-amber-500 to-amber-600"
+                          }`}
                       >
                         <div className="flex items-center gap-1.5">
                           {isFake ? (
@@ -343,21 +341,20 @@ const NewsSection = ({ news }: NewsProps) => {
                             {isFake
                               ? "Fake"
                               : isHighlyCredible
-                              ? "Real"
-                              : "Misleading"}
+                                ? "Real"
+                                : "Misleading"}
                           </span>
                         </div>
                       </div>
 
                       {/* Credibility Score */}
                       <div
-                        className={`absolute top-3 right-3 z-10 rounded-full px-3 py-1.5 text-xs font-semibold shadow-lg backdrop-blur-sm ${
-                          isFake
+                        className={`absolute top-3 right-3 z-10 rounded-full px-3 py-1.5 text-xs font-semibold shadow-lg backdrop-blur-sm ${isFake
                             ? "bg-white/90 text-red-600 border border-red-100"
                             : isHighlyCredible
-                            ? "bg-white/90 text-green-600 border border-green-100"
-                            : "bg-white/90 text-amber-600 border border-amber-100"
-                        }`}
+                              ? "bg-white/90 text-green-600 border border-green-100"
+                              : "bg-white/90 text-amber-600 border border-amber-100"
+                          }`}
                       >
                         <div className="flex items-center gap-1.5">
                           <TrendingUp className="w-3.5 h-3.5" />
@@ -373,13 +370,12 @@ const NewsSection = ({ news }: NewsProps) => {
                       {/* Image Section */}
                       <div className="w-full h-48 overflow-hidden">
                         <div
-                          className={`absolute inset-0 z-10 ${
-                            isFake
+                          className={`absolute inset-0 z-10 ${isFake
                               ? "bg-gradient-to-t from-red-900/70 via-transparent to-transparent"
                               : isHighlyCredible
-                              ? "bg-gradient-to-t from-green-900/70 via-transparent to-transparent"
-                              : "bg-gradient-to-t from-amber-900/70 via-transparent to-transparent"
-                          } opacity-60 group-hover:opacity-80 transition-opacity duration-300`}
+                                ? "bg-gradient-to-t from-green-900/70 via-transparent to-transparent"
+                                : "bg-gradient-to-t from-amber-900/70 via-transparent to-transparent"
+                            } opacity-60 group-hover:opacity-80 transition-opacity duration-300`}
                         ></div>
 
                         <img
@@ -451,29 +447,27 @@ const NewsSection = ({ news }: NewsProps) => {
                           </Tooltip>
 
                           <Tooltip>
-                            <TooltipTrigger>
+                            <TooltipTrigger asChild>
                               <button
                                 onClick={(e) => handleUpvote(newsItem.id, e)}
-                                className={`flex items-center gap-2 cursor-pointer rounded-full px-4 py-1.5 text-sm font-medium transition-all duration-300 ${
-                                  currentUser &&
-                                  votes[newsItem.id]?.includes(currentUser?.id)
+                                className={`flex items-center gap-2 cursor-pointer rounded-full px-4 py-1.5 text-sm font-medium transition-all duration-300 ${currentUser && votes[newsItem.id]?.includes(currentUser?.id)
                                     ? "bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:shadow-lg hover:shadow-blue-100/50"
                                     : "bg-gray-100 text-gray-700 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200 border border-transparent"
-                                }`}
+                                  }`}
                                 aria-label="Vote for credibility"
                               >
                                 <ArrowUp className="h-4 w-4" />
                                 <span>{votes[newsItem.id]?.length || 0}</span>
                               </button>
                             </TooltipTrigger>
+
                             <TooltipContent>
                               <p>
-                                {currentUser
-                                  ? "Vote for credibility"
-                                  : "Login to vote"}
+                                {currentUser ? "Vote for credibility" : "Login to vote"}
                               </p>
                             </TooltipContent>
                           </Tooltip>
+
                         </TooltipProvider>
                         <TooltipProvider>
                           <Tooltip>
@@ -517,11 +511,10 @@ const NewsSection = ({ news }: NewsProps) => {
                       currentPage > 1 && handlePageChange(currentPage - 1)
                     }
                     disabled={currentPage === 1}
-                    className={`rounded-lg transition-all duration-300 ${
-                      currentPage === 1
+                    className={`rounded-lg transition-all duration-300 ${currentPage === 1
                         ? "opacity-50"
                         : "hover:bg-blue-50 hover:text-blue-600"
-                    }`}
+                      }`}
                   >
                     <ChevronLeft className="h-5 w-5" />
                     <span className="sr-only">Previous page</span>
@@ -545,11 +538,10 @@ const NewsSection = ({ news }: NewsProps) => {
                               currentPage === pageNumber ? "default" : "ghost"
                             }
                             onClick={() => handlePageChange(pageNumber)}
-                            className={`h-10 w-10 rounded-lg font-medium transition-all duration-300 ${
-                              currentPage === pageNumber
+                            className={`h-10 w-10 rounded-lg font-medium transition-all duration-300 ${currentPage === pageNumber
                                 ? "bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-md shadow-blue-100/50"
                                 : "hover:bg-blue-50 hover:text-blue-600"
-                            }`}
+                              }`}
                           >
                             {pageNumber}
                           </Button>
@@ -581,11 +573,10 @@ const NewsSection = ({ news }: NewsProps) => {
                     disabled={
                       currentPage === Math.ceil(news.length / ITEMS_PER_PAGE)
                     }
-                    className={`rounded-lg transition-all duration-300 ${
-                      currentPage === Math.ceil(news.length / ITEMS_PER_PAGE)
+                    className={`rounded-lg transition-all duration-300 ${currentPage === Math.ceil(news.length / ITEMS_PER_PAGE)
                         ? "opacity-50"
                         : "hover:bg-blue-50 hover:text-blue-600"
-                    }`}
+                      }`}
                   >
                     <ChevronRight className="h-5 w-5" />
                     <span className="sr-only">Next page</span>

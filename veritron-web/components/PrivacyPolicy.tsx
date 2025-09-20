@@ -149,10 +149,10 @@ const PrivacyPolicy = () => {
             If you have any questions about this Privacy Policy, please contact us at:
           </p>
           <a
-            href="mailto:kartik.labhshetwar@gmail.com"
+            href="wmangesh91@gmail.com"
             className="inline-block mt-4 text-blue-600 hover:text-blue-700 transition-colors duration-300 font-medium"
           >
-            kartik.labhshetwar@gmail.com
+            wmangesh91@gmail.com
           </a>
         </section>
       </div>

@@ -38,7 +38,7 @@ const HeroSection = () => {
   };
 
   const handleInstallClick = () => {
-    window.open("https://chromewebstore.google.com/detail/satyacheck/gcfddalijlefoledjbeglcgeiebhgbnj", "_blank");
+    window.open("https://chromewebstore.google.com", "_blank");
   };
 
   return (

@@ -102,7 +102,6 @@ export default function PostDetailPage() {
   .from("news")
   .select(`
   *,
-  user:user_id(id, name, avatar),
   comments(id, text, likes, created_at, user:user_id(id, name, avatar))
 `)
   .eq("id", id)
