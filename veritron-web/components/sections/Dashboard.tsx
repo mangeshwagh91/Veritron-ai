@@ -39,7 +39,7 @@ const Dashboard = ({ stats }: any) => {
               {stats.map((stat: any, index: any) => (
                 <motion.div
                   key={index}
-                  variants={fadeIn("up", "spring", index * 0.2, 0.75)}
+                  variants={fadeIn("up", "spring", index * 0.2, 0.75) as any}
                   className="flex flex-col p-6 rounded-xl bg-white border border-blue-100 hover:border-blue-300 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group relative overflow-hidden"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
