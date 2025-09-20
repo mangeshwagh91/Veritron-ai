@@ -36,7 +36,7 @@ export default function Footer() {
 
           <div className="flex flex-col items-end space-y-4">
             <a
-              href="https://github.com/21prnv/SatyaCheck"
+              href="https://github.com/mangeshwagh91/MGM_Hackathon"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-blue-600 hover:text-blue-700 transition-colors duration-300"

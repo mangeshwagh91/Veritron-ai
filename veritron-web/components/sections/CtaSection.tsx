@@ -22,7 +22,7 @@ const CtaSection = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   const handleDownloadClick = () => {
-    window.open("https://chromewebstore.google.com/detail/satyacheck/gcfddalijlefoledjbeglcgeiebhgbnj", "_blank");
+    window.open("https://chromewebstore.google.com/", "_blank");
   };
 
   return (
