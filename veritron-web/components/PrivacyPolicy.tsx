@@ -158,7 +158,7 @@ const PrivacyPolicy = () => {
       </div>
 
       <footer className="mt-12 text-center text-gray-500 text-sm">
-        <p>Last updated: {new Date().toLocaleDateString()}</p>
+        <p suppressHydrationWarning>Last updated: {new Date().toLocaleDateString()}</p>
       </footer>
     </div>
   );

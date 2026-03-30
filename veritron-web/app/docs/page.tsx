@@ -91,7 +91,7 @@ export default function Docs() {
           <div className="space-y-12">
             {/* Overview Section */}
             <section id="overview">
-              <Card className="p-8 border-l-4 border-l-blue-500">
+              <Card className="p-8 bg-white border-l-4 border-l-blue-500">
                 <h2 className="text-3xl font-bold mb-6 text-gray-800 flex items-center gap-3">
                   <Shield className="w-8 h-8 text-blue-500" />
                   Overview
@@ -131,7 +131,7 @@ export default function Docs() {
 
             {/* Technical Stack */}
             <section id="technical-stack">
-              <Card className="p-8 border-l-4 border-l-violet-500">
+              <Card className="p-8 bg-white border-l-4 border-l-violet-500">
                 <h2 className="text-3xl font-bold mb-6 text-gray-800 flex items-center gap-3">
                   <Code className="w-8 h-8 text-violet-500" />
                   Technical Stack
@@ -213,7 +213,7 @@ export default function Docs() {
 
             {/* Architecture Section */}
             <section id="architecture">
-              <Card className="p-8 border-l-4 border-l-emerald-500">
+              <Card className="p-8 bg-white border-l-4 border-l-emerald-500">
                 <h2 className="text-3xl font-bold mb-6 text-gray-800 flex items-center gap-3">
                   <Server className="w-8 h-8 text-emerald-500" />
                   Architecture
@@ -307,7 +307,7 @@ export default function Docs() {
 
             {/* Core Services */}
             <section id="core-services">
-              <Card className="p-8 border-l-4 border-l-amber-500">
+              <Card className="p-8 bg-white border-l-4 border-l-amber-500">
                 <h2 className="text-3xl font-bold mb-6 text-gray-800 flex items-center gap-3">
                   <Cpu className="w-8 h-8 text-amber-500" />
                   Core Services
@@ -411,7 +411,7 @@ export default function Docs() {
 
             {/* Features Section */}
             <section id="features" className="scroll-mt-16">
-              <Card className="p-8 border-l-4 border-l-green-500">
+              <Card className="p-8 bg-white border-l-4 border-l-green-500">
                 <h2 className="text-2xl font-semibold mb-4 text-gray-800">
                   Key Features
                 </h2>
@@ -470,7 +470,7 @@ export default function Docs() {
 
             {/* Security & Performance Section */}
             <section id="security" className="scroll-mt-16">
-              <Card className="p-8 border-l-4 border-l-red-500">
+              <Card className="p-8 bg-white border-l-4 border-l-red-500">
                 <h2 className="text-2xl font-semibold mb-4 text-gray-800">
                   Security & Performance
                 </h2>
@@ -505,7 +505,7 @@ export default function Docs() {
 
             {/* Future Enhancements Section */}
             <section id="future" className="scroll-mt-16">
-              <Card className="p-8 border-l-4 border-l-purple-500">
+              <Card className="p-8 bg-white border-l-4 border-l-purple-500">
                 <h2 className="text-2xl font-semibold mb-4 text-gray-800">
                   Future Enhancements
                 </h2>

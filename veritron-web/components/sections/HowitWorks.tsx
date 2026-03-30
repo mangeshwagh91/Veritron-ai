@@ -85,7 +85,7 @@ const HowitWorks = () => {
               key={index}
               variants={fadeIn("up", "spring", index * 0.2, 0.75)}
             >
-              <Card className="border-blue-100 hover:border-blue-300 transition-all duration-500 relative shadow-md hover:shadow-xl overflow-visible transform hover:-translate-y-2 group">
+              <Card className="bg-white border-blue-100 hover:border-blue-300 transition-all duration-500 relative shadow-md hover:shadow-xl overflow-visible transform hover:-translate-y-2 group">
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
                   {feature.icon}
                 </div>

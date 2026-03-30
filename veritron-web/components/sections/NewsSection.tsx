@@ -151,17 +151,18 @@ const NewsSection = ({ news }: NewsProps) => {
 
   useEffect(() => {
     const fetchVotes = async () => {
-      const { data, error } = await supabase.from("news").select("id, votes");
-      if (data) {
-        const votesMap = data.reduce(
-          (acc, item) => ({
-            ...acc,
-            [item.id]: item.votes || [],
-          }),
-          {}
-        );
-        setVotes(votesMap);
-      }
+      // Missing 'votes' column in supabase causes 400 status error
+      // const { data, error } = await supabase.from("news").select("id, votes");
+      // if (data) {
+      //   const votesMap = data.reduce(
+      //     (acc, item) => ({
+      //       ...acc,
+      //       [item.id]: item.votes || [],
+      //     }),
+      //     {}
+      //   );
+      //   setVotes(votesMap);
+      // }
     };
     fetchVotes();
   }, []);

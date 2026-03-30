@@ -45,19 +45,19 @@ export default function ProfileComponent({ user }: { user: any }) {
             </div>
           )}
 
-          <h2 className="mt-4 text-2xl font-bold">{user.name}</h2>
+          <h2 className="mt-4 text-2xl font-bold text-gray-900">{user.name}</h2>
           <p className="text-gray-600">{user.email}</p>
         </div>
 
-        <div className="mt-6 border-t">
+        <div className="mt-6 border-t border-gray-200">
           <div className="mt-6 space-y-4">
             <div>
-              <h3 className="font-semibold">Name</h3>
-              <p>{user.name}</p>
+              <h3 className="font-semibold text-gray-900">Name</h3>
+              <p className="text-gray-700">{user.name}</p>
             </div>
             <div>
-              <h3 className="font-semibold">Email</h3>
-              <p>{user.email}</p>
+              <h3 className="font-semibold text-gray-900">Email</h3>
+              <p className="text-gray-700">{user.email}</p>
             </div>
             <button
               onClick={handleSignOut}
