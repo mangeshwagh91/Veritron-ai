@@ -3,10 +3,11 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   images: {
-    domains: ["lh3.googleusercontent.com", "img.freepik.com", "i.pinimg.com"],
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
+    remotePatterns: [
+      { protocol: "https", hostname: "lh3.googleusercontent.com" },
+      { protocol: "https", hostname: "img.freepik.com" },
+      { protocol: "https", hostname: "i.pinimg.com" },
+    ],
   },
 };
 
