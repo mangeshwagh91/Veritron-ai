@@ -13,6 +13,7 @@ import {
   Server,
   Cpu,
   Rocket,
+  Download,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -46,6 +47,7 @@ export default function Docs() {
           <nav className="space-y-2">
             {[
               { id: "overview", label: "Overview", icon: Shield },
+              { id: "installation", label: "Installation Guide", icon: Download },
               { id: "technical-stack", label: "Technical Stack", icon: Code },
               { id: "architecture", label: "Architecture", icon: Server },
               { id: "core-services", label: "Core Services", icon: Cpu },
@@ -124,6 +126,35 @@ export default function Docs() {
                     <Badge variant="outline" className="px-3 py-1">
                       Google Gemini AI
                     </Badge>
+                  </div>
+                </div>
+              </Card>
+            </section>
+
+            {/* Installation Section */}
+            <section id="installation">
+              <Card className="p-8 bg-white border-l-4 border-l-blue-600">
+                <h2 className="text-3xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+                  <Download className="w-8 h-8 text-blue-600" />
+                  Installation Guide (Developer Mode)
+                </h2>
+                <div className="space-y-4">
+                  <p className="text-gray-600 text-lg leading-relaxed mb-4">
+                    Since the extension is free and currently bypasses the Chrome Web Store, you can install it manually in just a few quick steps:
+                  </p>
+                  <ol className="list-decimal list-inside space-y-3 text-gray-700 text-lg font-medium">
+                    <li><strong className="text-gray-900">Download the Zip:</strong> Click the "Install Extension" button on the home page to download the <code>veritron-extension.zip</code> file.</li>
+                    <li><strong className="text-gray-900">Extract/Unzip:</strong> Locate the file in your Downloads folder, right-click it, and select <strong>Extract All...</strong>.</li>
+                    <li><strong className="text-gray-900">Open Chrome Extensions:</strong> In Chrome, type <code>chrome://extensions/</code> into your web address bar and press Enter.</li>
+                    <li><strong className="text-gray-900">Enable Developer Mode:</strong> In the very top-right corner of that page, toggle the switch for <strong>Developer mode</strong>.</li>
+                    <li><strong className="text-gray-900">Load Unpacked:</strong> Click the <strong>"Load unpacked"</strong> button that appears in the top-left corner.</li>
+                    <li><strong className="text-gray-900">Select Folder:</strong> Choose the extracted <code>dist</code> or <code>veritron-extension</code> folder you just unzipped.</li>
+                  </ol>
+                  <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                    <p className="text-blue-800 flex items-center gap-2">
+                       <Zap className="w-5 h-5" /> 
+                       <strong>You're all set!</strong> Pin the Veritron icon to your Chrome toolbar for quick access to real-time fact-checking.
+                    </p>
                   </div>
                 </div>
               </Card>

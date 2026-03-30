@@ -24,6 +24,7 @@ import { staggerContainer, fadeIn, textVariant } from "@/utils/motion";
 import PopupDialog from '@/components/ui/popup-dialog';
 
 const HeroSection = () => {
+  const router = useRouter();
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   const containerVariants = {
@@ -38,7 +39,16 @@ const HeroSection = () => {
   };
 
   const handleInstallClick = () => {
-    window.open("https://chromewebstore.google.com", "_blank");
+    // 1. Trigger the download of the zip file
+    const link = document.createElement("a");
+    link.href = "/veritron-extension.zip";
+    link.download = "veritron-extension.zip";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    // 2. Redirect the user to the installation instructions
+    router.push("/docs#installation");
   };
 
   return (
