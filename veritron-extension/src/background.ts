@@ -4,11 +4,14 @@ chrome.runtime.onMessage.addListener((message, sender) => {
   }
 });
 
+// Initialize extension on first install
 chrome.runtime.onInstalled.addListener(() => {
-  // Initialize API keys and credentials in chrome storage
-  chrome.storage.local.set({
-    geminiApiKey: import.meta.env.VITE_GEMINI_API_KEY,
-    supabaseUrl: import.meta.env.VITE_SUPABASE_URL,
-    supabaseAnonKey: import.meta.env.VITE_SUPABASE_ANON_KEY
-  });
+  console.log("Veritron AI extension installed");
+  // Environment variables are available during build time
+  // They are embedded in the built scripts via Vite
+});
+
+// Keep content script persistent
+chrome.runtime.onStartup.addListener(() => {
+  console.log("Veritron AI extension started");
 });

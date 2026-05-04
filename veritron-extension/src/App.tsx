@@ -58,7 +58,7 @@ export default function App() {
     setIsSaving(true);
 
     try {
-      const supabase = await createSupabaseClient();
+      const supabase = createSupabaseClient();
 
       const newsEntry: NewsEntry = {
         isFake: scrapedData.fake.toString(),
